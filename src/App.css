@@ -50,7 +50,7 @@ body {
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #444;
+  color: #8d8d8d;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -70,7 +70,7 @@ body {
   padding: 3px 9px;
   border-radius: 20px;
   border: 1px solid #222;
-  color: #444;
+  color: #8d8d8d;
   transition: all 0.3s;
 }
 
@@ -156,9 +156,9 @@ body {
   letter-spacing: 1px;
   padding: 5px 12px;
   border-radius: 20px;
-  border: 1px solid #222;
+  border: 1px solid #555;
   background: transparent;
-  color: #555;
+  color: #888;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -187,7 +187,7 @@ body {
   font-size: 8px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #333;
+  color: #a6a6a6;
 }
 
 .waka-input {
@@ -277,7 +277,7 @@ body {
   text-transform: uppercase;
   padding: 8px 20px;
   background: transparent;
-  color: #333;
+  color: #c3c3c3;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -309,7 +309,7 @@ body {
   font-size: 8px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #252525;
+  color: #8d8d8d;
   text-align: center;
   margin-top: auto;
 }
