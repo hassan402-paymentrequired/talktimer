@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "WakaTimer",
+  "version": "1.0.1",
+  "description": "A presentation timer — visible on every tab, even when popup is closed",
+  "icons": {
+    "48": "images/icon-48.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "scripting",
+    "storage",
+    "alarms",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}

@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #fff;
+}
+
+.waka-root {
+  width: 320px;
+  min-height: 420px;
+  background: #080808;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 16px;
+  gap: 20px;
+  font-family: 'DM Mono', monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+.waka-root::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header */
+.waka-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.waka-logo {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.waka-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.waka-status-badge {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid #222;
+  color: #444;
+  transition: all 0.3s;
+}
+
+.waka-status-badge.running {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+  background: rgba(74, 222, 128, 0.05);
+}
+
+.waka-status-badge.paused {
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.waka-status-badge.finished {
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+/* Ring */
+.waka-ring-wrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waka-ring {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.waka-ring-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  z-index: 1;
+}
+
+.waka-time {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #fff;
+  transition: color 0.4s;
+}
+
+.waka-of {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #333;
+}
+
+@keyframes waka-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Setup section */
+.waka-setup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.waka-presets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.waka-preset-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #222;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.waka-preset-btn:hover {
+  border-color: #444;
+  color: #bbb;
+  background: rgba(255,255,255,0.03);
+}
+
+.waka-manual-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.waka-input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.waka-input-group label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.waka-input {
+  width: 72px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  text-align: center;
+  background: #0f0f0f;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  color: #fff;
+  padding: 8px 4px;
+  outline: none;
+  transition: border-color 0.2s;
+  -moz-appearance: textfield;
+}
+
+.waka-input::-webkit-outer-spin-button,
+.waka-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.waka-input:focus {
+  border-color: #333;
+}
+
+.waka-colon {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #333;
+  margin-top: -12px;
+}
+
+/* Buttons */
+.waka-btn-primary {
+  width: 100%;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 13px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.waka-btn-primary:hover {
+  background: #e5e5e5;
+}
+
+.waka-play-icon {
+  font-size: 10px;
+}
+
+.waka-btn-secondary {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #222;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.waka-btn-secondary:hover {
+  border-color: #444;
+  color: #fff;
+}
+
+.waka-btn-ghost {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  background: transparent;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.waka-btn-ghost:hover {
+  color: #888;
+}
+
+/* Controls */
+.waka-controls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.waka-finished-msg {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #ef4444;
+  text-align: center;
+}
+
+/* Footer */
+.waka-footer {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #252525;
+  text-align: center;
+  margin-top: auto;
+}
