@@ -141,9 +141,9 @@ function App() {
             <div className="waka-of">
               of {formatTime(state.totalSeconds)}
             </div>
-          )}
+            )}
+          </div>
         </div>
-      </div>
 
       {!isActive && (
         <div className="waka-setup">
@@ -153,7 +153,7 @@ function App() {
                 {p.label}
               </button>
             ))}
-          </div>
+          </div>                    
 
           <div className="waka-manual-input">
             <div className="waka-input-group">
